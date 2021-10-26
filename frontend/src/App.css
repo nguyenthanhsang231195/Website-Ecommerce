@@ -1,0 +1,120 @@
+html{
+    font-size: 62.5%; /* 16px*62.5%=10px=1rem */
+    box-sizing: border-box;
+}
+
+body{
+    font: 1.5rem Helvetica;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* React */
+#root{
+    height: 100%;
+}
+
+/* Command */
+li{
+    list-style-type: none;
+    margin: 0.5rem;   
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+p{
+    margin-top: 0;
+    margin-bottom: 1rem;  
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+small{
+    font-size: 80%;
+}
+
+.App{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 1fr; /* Cột: 1*/
+    grid-template-rows: auto 1fr auto; /* Hàng: 3 Header, Main, Footer*/
+    height: 100%;
+    overflow: auto;
+}
+
+/* Header */
+.header-website{
+    grid-area: header;
+    font-size: 1.5rem;
+    position: relative;
+    background-color: black;
+    color: white;
+}
+
+/* Main */
+.main-website{
+    grid-area: main;
+    font-size: 1.8rem;
+    position: relative;
+    display: block;
+}
+
+/* Footer */
+.footer-website{
+    grid-area: footer;
+    font-size: 1.5rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    color: black;
+}
+
+@media (max-width: 1200px){
+    .header-website{
+        font-size: 1.4rem;
+    }
+    .main-website{
+        font-size: 1.7rem;
+    }
+    .footer-website{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px){
+    .header-website{
+        font-size: 1.3rem;
+    }
+    .main-website{
+        font-size: 1.6rem;
+    }
+    .footer-website{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px){
+    .header-website{
+        font-size: 1.2rem;
+    }
+    .main-website{
+        font-size: 1.5rem;
+    }
+    .footer-website{
+        font-size: 1.2rem;
+    }
+}
