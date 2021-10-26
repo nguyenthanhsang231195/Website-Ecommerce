@@ -7,8 +7,8 @@ I. Khởi tạo ReactJs và GitHub
 - npm install react-router
 - npm install react-router-dom
 - npm install react-bootstrap@next bootstrap@5.1.1
-2) Tạo các file chưa data
-- data.js
+2) Tạo các file chứa data
+- src/Data/
 - public/images/
 - public/videos/
 3) Lưu ý nhớ chuyển file .gitignore và README.md ra ngoài folder frontend
@@ -19,5 +19,9 @@ I. Khởi tạo ReactJs và GitHub
 - git add README.md (sau này dùng git add . = lấy tất cả các file)
 - git commit -m "first commit" (đặt tên commit cho dễ nhớ)
 - git branch -M main
-- 
+- git remote add origin https://github.com/nguyenthanhsang231195/Website-Ecommerce.git
 - git push -u origin main (sau này chỉ dùng git push)
+
+II. HomeScreen Update
+1) npm install react-elastic-carousel
+2) npm install styled-components(Thằng này nó hơi dị không chơi kiểu css thuần mà kiểu style khi xây dựng Item https://sag1v.github.io/react-elastic-carousel/)

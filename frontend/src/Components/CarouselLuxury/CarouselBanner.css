@@ -1,0 +1,12 @@
+.carousel-luxury{
+    position: relative;
+    padding-top: 1rem;
+    max-width: 85%;
+    margin: auto;
+}
+
+.carousel-banner{
+    position: relative;
+    width: 100%;
+    border: 0.1rem solid gray;
+}

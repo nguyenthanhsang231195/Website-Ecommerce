@@ -1,0 +1,329 @@
+.home-screen{
+    position: relative;
+    max-width: 1380px;
+    margin: auto;
+    font-size: 1.8rem;
+}
+/* Chính sách */
+.policy{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 2% 0% 1% 0;
+    background-color: black;
+    color: white;
+}
+
+.policy-card{
+    position: relative;
+    flex: 1 1 20rem;
+    border: 0.2rem solid gray;
+}
+
+.policy-icon i{
+    font-size: 2.5rem;
+    color: cadetblue;
+}
+
+.policy-name{
+    color: brown;
+}
+
+/* Sản phẩm bán chạy */
+.best-seller-product{
+    position: relative;
+    width: 100%;
+}
+
+.title-product{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-product h2{
+    font-size: 3.0rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 
+    0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.best-seller-product ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-seller-product ul li{
+    flex: 0 1 32rem;
+    border: 0.1rem solid black;
+}
+
+.box-product{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.product-image{
+    width: 100%;
+    max-height: 32rem;
+    padding-bottom: 1rem;
+}
+  
+.product-name{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.8rem;
+    color: lightslategray;
+}
+  
+.product-price{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Sản phẩm giảm giá */
+.discount-product{
+    position: relative;
+    width: 100%;
+}
+
+.title-product-discount{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title-product-discount span{
+    position: relative;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-style: italic;
+    display: inline-block;
+    color: darkmagenta;
+}
+
+.title-product-discount span:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.discount-product ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.website-homescreen{
+    display: block;
+    flex: 0 1 24rem;
+    border: 0.1rem solid black;
+}
+
+.mobie-homescreen{
+    display: none;
+    flex: 0 1 20rem;
+    border: 0.1rem solid black;
+}
+
+.product-discount-image{
+    width: 100%;
+    max-height: 24rem;
+    padding-bottom: 1rem;
+}
+  
+.product-discount-name{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.8rem;
+    color: lightslategray;
+}
+
+.product-discount-sell{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.product-discount-price{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.product-discount-price-sell{
+    text-decoration: line-through;
+    color: red;
+    margin-left: 3%;
+}
+
+/* Banner */
+.Banner-Change{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Banner-Change img{
+    display: block;
+    max-width: 100%;
+    max-height: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Page */
+.change-page{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+.change-page-category{
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+.change-page-category h1{
+    color: #484848;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.change-page-category h1 span{
+    transition: 0.4s linear;
+}
+
+.change-page-category h1:hover span:nth-child(1){
+    margin-right: 0.5rem;
+}
+
+.change-page-category h1:hover span:nth-child(1):after{
+    content: "";
+}
+
+.change-page-category h1:hover span:nth-child(2){
+    margin-left: 2.5rem;
+}
+.change-page-category h1:hover span{
+    color: #fff;
+    text-shadow: 
+    0 0 10px #fff,
+    0 0 20px #fff, 
+    0 0 40px #fff;
+}
+
+@media (max-width: 1200px){
+    .title-product h2{
+        font-size: 2.8rem;
+    }
+    .title-product-discount span{
+        font-size: 2.4rem;
+    }
+    .best-seller-product ul li{
+        flex: 0 1 29rem;
+    }
+    .website-homescreen{
+        flex: 0 1 22rem;
+    }
+    .product-image{
+        max-height: 29rem;
+    }
+    .product-discount-image{
+        max-height: 22rem;
+    }
+    .product-name, .product-discount-name{
+        font-size: 1.7rem;
+    }
+    .product-price, .product-discount-price, .product-discount-price-sell{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px){
+    .policy{
+        display: none;
+    }
+    .title-product h2{
+        font-size: 2.6rem;
+    }
+    .title-product-discount span{
+        font-size: 2.3rem;
+    }
+    .best-seller-product ul li{
+        flex: 0 1 27rem;
+    }
+    .website-homescreen{
+        flex: 0 1 20rem;
+    }
+    .product-image{
+        max-height: 27rem;
+    }
+    .product-discount-image{
+        max-height: 20rem;
+    }
+    .product-name, .product-discount-name{
+        font-size: 1.6rem;
+    }
+    .product-price, .product-discount-price, .product-discount-price-sell{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px){
+    .title-product h2{
+        font-size: 2.4rem;
+    }
+    .title-product-discount span{
+        font-size: 2.2rem;
+    }
+    .best-seller-product ul li{
+        flex: 0 1 26rem;
+    }
+    .website-homescreen{
+        display: none;
+    }
+    .mobie-homescreen{
+        display: block;
+    }
+    .product-image{
+        max-height: 26rem;
+    }
+    .product-discount-image{
+        max-height: 19rem;
+    }
+    .product-name, .product-discount-name{
+        font-size: 1.5rem;
+    }
+    .product-price, .product-discount-price, .product-discount-price-sell{
+        font-size: 1.2rem;
+    }
+}

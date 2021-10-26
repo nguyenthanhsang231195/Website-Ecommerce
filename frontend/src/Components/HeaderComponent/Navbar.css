@@ -1,0 +1,90 @@
+.nav-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1380px;
+    margin: auto;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar ul{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item{
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-item:hover{
+    color: violet;
+    text-decoration: none;
+}
+
+.navbar-item span:hover{
+    color: violet;
+}
+
+.navbar-item i{
+    color: red;
+}
+
+.navbar-item i:hover{
+    color: purple;
+}
+
+.logo{
+    position: relative;
+    width: 23rem;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.sign-in-and-cart ul{
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.badge{
+    background-color: white;
+    color: red !important;
+    border-radius: 50% !important;
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    font-size: 1.4rem;
+    margin-left: 0.8rem;
+}
+
+@media (max-width: 1200px){
+    .nav-header{
+        font-size: 1.7rem;
+    }
+    .logo{
+        width: 20rem;
+    }
+}
+
+@media (max-width: 992px){
+    .nav-header{
+        font-size: 1.6rem;
+    }
+    .logo{
+        width: 18rem;
+    }
+}
+
+@media (max-width: 768px){
+    .nav-header{
+        font-size: 1.5rem;
+    }
+    .logo{
+        display: none;
+    }
+}
