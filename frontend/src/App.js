@@ -11,9 +11,10 @@ import VideoAdvertise from './Components/VideoLuxury/VideoAdvertise';
 
 // Screen
 import HomeScreen from './Screens/HomeScreen/HomeScreen';
+import ProductScreen from './Screens/ProductScreen/ProductScreen';
 
 function App() {
-  return (
+    return (
 <BrowserRouter>
 <div className="App">
     <header className="header-website">
@@ -27,6 +28,8 @@ function App() {
         <Route path="/" component={HomeScreen} exact />
         <Route path="/" component={VideoAdvertise} exact />
 
+        {/* Screens */}
+        <Route path="/product/:slug" component={ProductScreen} />
     </main>
 
     <footer className="footer-website">
@@ -34,7 +37,7 @@ function App() {
     </footer>
 </div>
 </BrowserRouter>
-  );
+    );
 }
 
 export default App;
