@@ -1,0 +1,8 @@
+.checkbox{
+    position: relative;
+    width: 100%;
+}
+
+.checkbox input{
+    margin-top: 0.5rem;
+}

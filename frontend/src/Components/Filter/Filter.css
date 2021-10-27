@@ -1,0 +1,36 @@
+.filter{
+    position: relative;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-left: 1rem;
+}
+
+.filter-result{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+}
+
+.filter-sort, .filter-size, .filter-color{
+    display: inline-flex;
+    font-weight: 800;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    padding: 3% 0 3% 0;    
+}
+
+.filter-sort select, .filter-size select, .filter-color select{
+    padding-left: 2rem;
+    height: 4rem;
+    width: 12rem;
+    border: 0.2rem dashed rebeccapurple;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    z-index: 100;
+}

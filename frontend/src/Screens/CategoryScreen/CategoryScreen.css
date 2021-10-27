@@ -1,0 +1,142 @@
+.category-screen{
+    position: relative;
+    display: flex;
+    max-width: 1380px;
+    margin: auto;
+    font-size: 1.8rem;
+    top: 1%;
+    gap: 1rem;
+}
+
+.filter-category{
+    flex: 1 1 20%;
+}
+
+.product-category{
+    flex: 1 1 80%;
+}
+
+/* CheckBox */
+.searchContainer{
+    position: relative;
+    width: 100%;
+    background-color: gray;
+}
+  
+.searchContainer h3{
+    padding-top: 5%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: burlywood;
+}
+
+.checkbox-div{
+    width: 100%;
+    position: relative;
+}
+
+.searchContainer label{
+    padding-left: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.searchContainer input{
+    float: right;
+    margin-right: 2rem;
+}
+
+/* Sản phẩm giảm giá */
+.discount-product{
+    position: relative;
+    width: 100%;
+}
+
+.discount-product ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.discount-product ul li{
+    flex: 0 1 24rem;
+    border: 0.1rem solid black;
+}
+
+.product-discount-image{
+    width: 100%;
+    max-height: 24rem;
+    padding-bottom: 1rem;
+}
+  
+.product-discount-name{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.8rem;
+    color: lightslategray;
+}
+
+.product-discount-sell{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.product-discount-price{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.product-discount-price-sell{
+    text-decoration: line-through;
+    color: red;
+    margin-left: 3%;
+}
+
+@media (max-width: 1200px){
+    .discount-product ul li{
+        flex: 0 1 22rem;
+    }
+    .product-discount-image{
+        max-height: 22rem;
+    }
+    .product-discount-name{
+        font-size: 1.7rem;
+    }
+    .product-discount-price, .product-discount-price-sell{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 992px){
+    .discount-product ul li{
+        flex: 0 1 20rem;
+    }
+    .product-discount-image{
+        max-height: 20rem;
+    }
+    .product-discount-name{
+        font-size: 1.6rem;
+    }
+    .product-discount-price, .product-discount-price-sell{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px){
+    .discount-product ul li{
+        flex: 0 1 19rem;
+    }
+    .product-discount-image{
+        max-height: 19rem;
+    }
+    .product-discount-name{
+        font-size: 1.5rem;
+    }
+    .product-discount-price, .product-discount-price-sell{
+        font-size: 1.2rem;
+    }
+}

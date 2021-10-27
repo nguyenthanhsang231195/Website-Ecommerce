@@ -15,7 +15,7 @@ export default function Navbar() {
             </li>
 
             <li>
-                <Link to="/category" className="navbar-item">
+                <Link to="/categorycheck" className="navbar-item">
                     <i className="fab fa-product-hunt"></i> 
                     <span> Category </span> 
                 </Link>
