@@ -1,17 +1,80 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { withRouter } from 'react-router';
 import productData from '../../Data/data';
+import { remove } from '../../Redux-Toolkit/product-modal/productModalSlice';
+import { addItem } from '../../Redux-Toolkit/shopping-cart/cartItemsSlide';
 import formatCurrency from '../../util';
 import './ProductScreen.css';
 
 function ProductScreen(props) {
 
-    const product = productData.getProductBySlug(props.match.params.slug);
+    const dispatch = useDispatch();
+    let product = productData.getProductBySlug(props.match.params.slug);
+
+    if (product === undefined) product = {
+        name: '',
+        slug: '',
+        price: '',
+        image_main: null,
+        categorySlug: "",
+        color: [],
+        size: [],
+        description: ""
+    }
+
     const [previewImg, setPreviewImg] = useState(product.image_main);
+    const [color, setColor] = useState(undefined);
+    const [size, setSize] = useState(undefined);
     const [quantity, setQuantity] = useState(1);
 
+    const updateQuantity = (type) => {
+        if (type === 'plus') {
+            setQuantity(quantity + 1)
+        } else {
+            setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
+        }
+    }
+
+    useEffect(() => {
+        setPreviewImg(product.image_main)
+        setQuantity(1)
+        setColor(undefined)
+        setSize(undefined)
+    }, [product])
+
+    const check = () => {
+        if(color === undefined) {
+            alert('Bạn chưa chọn màu sản phẩm')
+            return false;
+        }
+        if(size === undefined) {
+            alert('Bạn chưa chọn size sản phẩm')
+            return false;
+        }
+        if(quantity >= product.countInStock){
+            alert('Hàng còn lại trong kho:' + product.countInStock)
+            return false;
+        }
+        return true;
+    }
+
     const addToCartHandler = () => {
-        props.history.push(`/cart/`);
+        if (check()) {
+            let newItem = {
+                slug: product.slug,
+                color: color,
+                size: size,
+                price: product.price,
+                quantity: quantity
+            }
+            if (dispatch(addItem(newItem))) {
+                dispatch(remove())
+                props.history.push('/cart')
+            } else {
+                alert('Fail')
+            }
+        }
     }
 
     return (
@@ -85,7 +148,10 @@ function ProductScreen(props) {
                 <label className="infor-product-color-size">
                     <h2>  Màu Bạn Thích: </h2>
                    
-                    <select className="select-color-size">
+                    <select className="select-color-size"
+                        value={color}
+                        onClick={(e) => setColor(e.target.value)}
+                    >
                         {
                             product.color.map((item, index) => (
                                 <option key={index} value={item}> {item} </option>
@@ -99,7 +165,10 @@ function ProductScreen(props) {
                 <label className="infor-product-color-size">
                     <h2>  Size Bạn Chọn: </h2>
                    
-                    <select className="select-color-size">
+                    <select className="select-color-size"
+                        value={size}
+                        onClick={(e) => setSize(e.target.value)}
+                    >
                         {
                             product.size.map((item, index) => (
                                 <option key={index} value={item}> {item} </option>
@@ -108,21 +177,22 @@ function ProductScreen(props) {
                      </select>
                 </label>
             </li>
-
-            {product.countInStock > 0 && (
+           
             <li>
                 <div className="product-cart">
                     <h2> Số lượng: </h2>
 
-                    <select className="input-quantity"
-                        value={quantity}
-                        onChange={(e) => setQuantity(e.target.value)}
-                        >
-                        {[...Array(product.countInStock).keys()].map((x) => 
-                            (<option key={x + 1} value={x + 1}> {x + 1} </option>)
-                        )}
-                        {quantity}
-                    </select>
+                    <div className="product-quantity">
+                        <div className="button-minus" onClick={() => updateQuantity('minus')}>
+                            <i className="fas fa-minus"></i>
+                        </div>
+                        <div className="box-quantity">
+                            {quantity}
+                        </div>
+                        <div className="button-plus" onClick={() => updateQuantity('plus')}>
+                            <i className="fas fa-plus"></i>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="containerB row-xGrid-yMiddle">
@@ -131,8 +201,8 @@ function ProductScreen(props) {
                     </div>
                 </div>
             </li>
-                )
-            }    
+
+
         </ul>
     </div>
 </div>

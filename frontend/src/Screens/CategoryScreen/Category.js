@@ -7,6 +7,9 @@ import './CategoryScreen.css';
 
 export default function Category() {
 
+    const productList = productData.getAllProducts();
+    const [products, setProducts] = useState(productList);
+
     const initFilter = {
         category: [],
         color: [],
@@ -151,7 +154,6 @@ export default function Category() {
                     setFilter({...filter, size: [...filter.size, item.size]})
                     break
                 default:
-                    break
                 }
         }else 
             {
@@ -170,13 +172,9 @@ export default function Category() {
                     setFilter({...filter, size: newSize})
                     break
                 default:
-                    break
                 }
             }
     }
-
-    const productList = productData.getAllProducts()
-    const [products, setProducts] = useState(productList)
 
     const updateProducts = useCallback(() => 
         {
@@ -273,7 +271,7 @@ export default function Category() {
                 </li>
             ))}
             </ul>
-        </div> 
+        </div>
     </div>
 </div>
     )

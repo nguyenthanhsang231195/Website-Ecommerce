@@ -1,0 +1,280 @@
+/* Cart */
+.cart-screen{
+    position: relative;
+    display: block;
+    max-width: 1380px;
+    margin: auto;
+    font-size: 1.8rem;
+    top: 1%;
+}
+
+/* Tên Giỏ Hàng */
+.cart-name{
+    width: 100%;
+    text-align: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRrWa3QQvAs16ABAQfpoplp7fidrAOl_igw&usqp=CAU);
+}
+
+.shadows{
+    position: relative;
+    text-transform: uppercase;
+    text-shadow: -15px 5px 20px #ced0d3;
+    letter-spacing: -0.05em;
+    user-select: none;
+    font-size: 4rem;
+    transition: all 0.5s ease-out;
+    color: black;
+}
+
+.shadows:hover {
+    text-shadow: -16px 6px 15px #ced0d3;
+    font-size: 5rem;
+}
+
+.shadows span{
+    font-weight: bolder;
+}
+
+/* Main */
+.cart-main{
+    position: relative;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.cart-table{
+    position: relative;
+    width: 90%; 
+    margin-top: 3rem;
+    display: table;
+    margin: 0 auto;
+}
+
+/* Table I*/
+.cart-table-first{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: yellow;
+    color: black;
+}
+
+.cart-table-first tr th{
+    border-left: 0.25rem dashed black;
+    border-top: 0.4rem solid black;
+    border-right: 0.25rem dashed black;
+    border-bottom: 0.4rem solid black;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+/* Table II CartItem */
+.cart-table-second{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cart-table-second tr th{
+    border-left: 0.25rem solid black;
+    border-top: 0.4rem dashed black;
+    border-right: 0.25rem solid black;
+    border-bottom: 0.4rem dashed black;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* cart-image */
+.cart-image{
+    position: relative;
+    display: block;
+}
+
+.image-product-cart{
+    position: relative;
+    margin-top: 1rem;
+    max-width: 9rem;
+    min-width: 5rem;
+    border: 0.1rem solid black;
+}
+
+.color-product-cart{
+    margin-top: 1rem;
+}
+
+.color-product-cart h3{
+    font-size: 1.5rem;
+}
+
+.size-product-cart{
+    margin-top: 1rem;
+}
+
+.size-product-cart h3{
+    font-size: 1.5rem;
+}
+
+/* cart-name*/
+.cart-name-th{
+    position: relative;
+    display: block;
+}
+
+.cart-name-th h3{
+    color: black;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+/* cart-price */
+.cart-price{
+    position: relative;
+    display: block;
+}
+
+.cart-price h3{
+    color: black;
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+}
+
+
+/* Xóa */
+.button-delete{
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Số lượng */
+.product-cart-item{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.product-cart-item h3{
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.product-quantity-item{
+    position: relative;
+    display: inline-flex;
+    width: 70%;
+    gap: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.box-quantity-item{
+    position: relative;
+    text-align: center;
+    width: 7rem;
+    height: 3rem;
+    font-size: 2rem;
+    border: 0.2rem solid black;
+}
+
+.button-minus-item, .button-plus-item{
+    position: relative;
+    width: 3.5rem;
+    height: 3rem;
+    border: 0.1rem solid gray;
+}
+
+.button-minus-item i, .button-plus-item i{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 0.5rem;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Total */
+.box-total-cart{
+    float: right;
+    width: 45rem;
+    height: auto;
+    margin-top: 2rem;
+    border: 0.3rem dotted palevioletred;
+    background-color: black;
+    color: white;
+}
+
+.box-name-total-cart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.box-name-total-cart h3{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: hotpink;
+    font-size: 2.8rem;
+}
+
+.total-cart{
+    margin: 0;
+    padding: 0;
+}
+
+.total-cart ul{
+    margin: 0;
+    padding: 0;
+}
+
+.total-cart ul li{
+    line-height: 4rem;
+    font-size: 1.6rem;
+}
+
+.li-cart-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.li-cart-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.li-cart-3{
+    display: flex;
+    justify-content: space-between;
+}
+
+.li-cart-4{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.li-cart-4 button{
+    background-color: violet;
+    font-size: 2rem;
+    border: 0.2rem groove red;
+    width: 70%;
+    transition: all;
+    transition-duration: 1.2s;
+}
+
+.li-cart-4 button:hover{
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
+    border: 0.4rem groove blueviolet;
+    text-transform: uppercase;
+    color: whitesmoke;
+    opacity: 0.8;
+}

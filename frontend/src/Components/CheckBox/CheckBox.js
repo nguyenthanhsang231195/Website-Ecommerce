@@ -1,9 +1,9 @@
 import React from 'react';
 import './CheckBox.css';
+
 export default function CheckBox(props) {
 
     const inputRef = React.useRef(null);
-
     const onChange = () => {
         if (props.onChange) {
             props.onChange(inputRef.current)

@@ -176,6 +176,7 @@
 .product-cart{
     display: inline-flex;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .product-cart h2{
@@ -183,16 +184,35 @@
     margin-top: 0.5rem;
 }
 
-.input-quantity{
-    padding-left: 2rem;
-    height: 4rem;
-    width: 12rem;
-    border: 0.2rem dashed rebeccapurple;
-    background-color: black;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 700;
-    z-index: 100;
+.product-quantity{
+    position: relative;
+    display: inline-flex;
+    width: 70%;
+    gap: 1.5rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.box-quantity{
+    text-align: center;
+    width: 7rem;
+    height: 3rem;
+    border: 0.2rem solid black;
+}
+
+.button-minus, .button-plus{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 4rem;
+    height: 3rem;
+    border: 0.1rem solid gray;
+}
+
+.button-minus i, .button-plus i{
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 /* Nút mua sắm */

@@ -27,7 +27,12 @@ II. HomeScreen Update
 2) npm install styled-components(Thằng này nó hơi dị không chơi kiểu css thuần mà kiểu style khi xây dựng Item https://sag1v.github.io/react-elastic-carousel/)
 
 III. ProductScreen
+
 IV. Category
 1) Có 2 cái Filter muốn xài cái nào cũng được
 - Chủ yếu học hỏi
 2) Học hỏi dùng hàm useCallback, cách dùng
+
+V. CartScreen
+1) Sử dụng Redux Toolkit
+2) Thêm index.js và store.js

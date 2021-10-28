@@ -14,6 +14,7 @@ import HomeScreen from './Screens/HomeScreen/HomeScreen';
 import ProductScreen from './Screens/ProductScreen/ProductScreen';
 import CategoryScreen from './Screens/CategoryScreen/CategoryScreen';
 import Category from './Screens/CategoryScreen/Category';
+import CartScreen from './Screens/CartScreen/CartScreen';
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/product/:slug" component={ProductScreen} />
         <Route path="/category" component={CategoryScreen} />
         <Route path="/categorycheck" component={Category} />
+        <Route path="/cart" component={CartScreen} />
     </main>
 
     <footer className="footer-website">
