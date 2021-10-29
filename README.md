@@ -36,3 +36,17 @@ IV. Category
 V. CartScreen
 1) Sử dụng Redux Toolkit
 2) Thêm index.js và store.js
+
+VI. NodeJs Server
+1) Tạo folder backend
+2) -> npm init (Sau đó ấn enter liên tục)
+3) -> npm install express
+4) "type": "module", (thêm vào ở package.json/backend)
+5) Thêm (JSON viewer) vào google chrome
+6) npm install --save-dev nodemon (Lưu lại data ở backend mà không phải reload, thêm: 
+"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js")
+- npm start
+
+VII. Axios - Load Products from Backend
+1) cd frontend -> npm install axios
+2) Thêm 2 components: LoadingBox and MessageBox

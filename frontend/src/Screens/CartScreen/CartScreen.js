@@ -6,7 +6,7 @@ import productData from '../../Data/data';
 import formatCurrency from '../../util';
 import './CartScreen.css';
 
-function CartScreen(props) {
+function CartScreen() {
 
     const cartItems = useSelector((state) => state.cartItems.value)
     const [cartProducts, setCartProducts] = useState(productData.getCartItemsInfo(cartItems))

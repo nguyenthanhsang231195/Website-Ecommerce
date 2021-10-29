@@ -1,0 +1,8 @@
+.loading{
+    font-size: larger;
+    display: block !important;
+}
+
+.loading i{
+    font-size: 3rem;
+}
