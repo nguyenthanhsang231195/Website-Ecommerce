@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 import Carousel from 'react-elastic-carousel';
 import policy from '../../Data/policy';
-import productData from '../../Data/data';
 import formatCurrency from '../../util';
 import './HomeScreen.css';
+import LoadingBox from '../../Components/LoadingBox/LoadingBox';
+import MessageBox from '../../Components/MessageBox/MessageBox';
 
 
 export default function HomeScreen() {
+
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState();
+    const [error, setError] = useState();
+
+    const getProducts = (count) => {
+        const max = products.length - count
+        const start = Math.floor(Math.random() * max)
+        return products.slice(start, start + count)
+    }
 
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
@@ -16,7 +28,26 @@ export default function HomeScreen() {
         { width: 1200, itemsToShow: 4 },
     ];
 
+    useEffect(() => {
+        const fetchData = async () => {
+        try {
+            setLoading(true);
+            const { data } = await axios.get('/api/products');
+            setLoading(false);
+            setProducts(data);
+        } catch (err) {
+            setError(err.message);
+            setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
+
     return (
+<>
+{loading ? 
+(<LoadingBox></LoadingBox>) : error ? 
+(<MessageBox variant="danger"> {error} </MessageBox>) : (
 <div className="home-screen">
 
     <div className="policy">
@@ -45,7 +76,7 @@ export default function HomeScreen() {
 
         <ul>
         <Carousel breakPoints={breakPoints}>
-            {productData.getProducts(8).map((product) => (
+            {getProducts(8).map((product) => (
                 <li key={product._id}>
                     <div className="box-product">
                         <Link to={`/product/${product.slug}`}>
@@ -74,7 +105,7 @@ export default function HomeScreen() {
         </div>
 
         <ul>
-        {productData.getProducts(10).map((product) => (
+        {getProducts(10).map((product) => (
         <li className="website-homescreen" key={product._id}>
             <div className="box-product">
                 <Link to={`/product/${product.slug}`}>
@@ -98,7 +129,7 @@ export default function HomeScreen() {
             </div>
         </li>
         ))}
-        {productData.getProducts(6).map((product) => (
+        {getProducts(6).map((product) => (
         <li className="mobie-homescreen" key={product._id}>
             <div className="box-product">
                 <Link to={`/product/${product.slug}`}>
@@ -134,6 +165,8 @@ export default function HomeScreen() {
         </div>
     </div>
 </div>
+)}
+</>
 
     );
 }

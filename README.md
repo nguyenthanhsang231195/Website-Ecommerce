@@ -50,3 +50,11 @@ VI. NodeJs Server
 VII. Axios - Load Products from Backend
 1) cd frontend -> npm install axios
 2) Thêm 2 components: LoadingBox and MessageBox
+3) Folder Backend/Models
+- npm install mongoose
+- npm install nodemon
+- npm install stripe
+- npm install dotenv
+- npm install crypto-js
+- npm install cors
+- npm install jsonwebtoken

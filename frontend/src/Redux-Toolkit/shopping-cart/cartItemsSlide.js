@@ -12,9 +12,15 @@ export const cartItemsSlice = createSlice({
     reducers: {
         addItem: (state, action) => {
             const newItem = action.payload
-            const duplicate = state.value.filter(e => e.slug === newItem.slug && e.color === newItem.color && e.size === newItem.size)
+            const duplicate = state.value.filter(
+                e => e.slug === newItem.slug && 
+                e.color === newItem.color &&
+                e.size === newItem.size)
             if (duplicate.length > 0) {
-                state.value = state.value.filter(e => e.slug !== newItem.slug || e.color !== newItem.color || e.size !== newItem.size)
+                state.value = state.value.filter(
+                    e => e.slug !== newItem.slug || 
+                    e.color !== newItem.color || 
+                    e.size !== newItem.size)
                 state.value = [...state.value, {
                     id: duplicate[0].id,
                     slug: newItem.slug,
